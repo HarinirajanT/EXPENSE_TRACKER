@@ -1,0 +1,112 @@
+/* LoginSignup.css */
+.login-signup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #081a3c, #bac8e0); /* Background for this page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it is on top of other content */
+  }
+  
+  .glass-effect {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(173, 216, 230, 0.5); /* Glow effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    color: #ffffff; /* Text color set to white */
+    animation: fadeIn 1s ease-in-out, glowPulse 2s infinite alternate;
+  }
+  
+  .glass-effect h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffffff; /* Text color set to white */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff; /* Text color set to white */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff; /* Text color set to white */
+    outline: none;
+    font-size: 14px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1); /* Inner glow */
+  }
+  
+  .form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+  }
+  
+  .submit-btn {
+    background: linear-gradient(to right, #415883, #bac8e0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff; /* Text color set to white */
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #bac8e0, #6a85b6);
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.8); /* Glow on hover */
+  }
+  
+  .toggle-mode {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #ffffff; /* Text color set to white */
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  
+  .toggle-mode:hover {
+    color: #c1c1c1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(173, 216, 230, 0.5);
+    }
+    100% {
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 30px rgba(173, 216, 230, 0.8);
+    }
+  }
